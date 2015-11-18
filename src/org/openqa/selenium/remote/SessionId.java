@@ -17,7 +17,11 @@
 
 package org.openqa.selenium.remote;
 
-public class SessionId {
+import java.io.Serializable;
+
+public class SessionId 
+implements Serializable 
+{
 
   private final String opaqueKey;
 

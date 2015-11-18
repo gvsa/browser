@@ -14,8 +14,7 @@ public class TestRead {
 
 	@Test
 	public void scenario() {
-		WebDriver w = new ChromeDriver();
-		w.close();
+		WebDriver w = null;
 
 		File f = new File("chrome.txt");
 		FileInputStream fin;
