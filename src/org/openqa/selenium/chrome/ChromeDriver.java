@@ -19,6 +19,9 @@
 package org.openqa.selenium.chrome;
 
 import com.google.common.collect.ImmutableMap;
+
+import java.io.Serializable;
+
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -101,7 +104,9 @@ import org.openqa.selenium.remote.html5.RemoteWebStorage;
  * @see ChromeDriverService#createDefaultService
  */
 public class ChromeDriver extends RemoteWebDriver
-    implements LocationContext, WebStorage {
+    implements LocationContext, WebStorage
+    , Serializable
+    {
 
   private RemoteLocationContext locationContext;
   private RemoteWebStorage webStorage;

@@ -17,9 +17,12 @@
 
 package org.openqa.selenium.remote;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class RemoteExecuteMethod implements ExecuteMethod {
+public class RemoteExecuteMethod implements ExecuteMethod
+,Serializable
+{
   private final RemoteWebDriver driver;
 
   public RemoteExecuteMethod(RemoteWebDriver driver) {

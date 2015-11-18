@@ -17,6 +17,8 @@
 
 package org.openqa.selenium.remote.html5;
 
+import java.io.Serializable;
+
 import org.openqa.selenium.html5.LocalStorage;
 import org.openqa.selenium.html5.SessionStorage;
 import org.openqa.selenium.html5.WebStorage;
@@ -25,7 +27,9 @@ import org.openqa.selenium.remote.ExecuteMethod;
 /**
  * Provides remote access to the {@link WebStorage} API.
  */
-public class RemoteWebStorage implements WebStorage {
+public class RemoteWebStorage implements WebStorage
+,Serializable
+{
 
   private final ExecuteMethod executeMethod;
 

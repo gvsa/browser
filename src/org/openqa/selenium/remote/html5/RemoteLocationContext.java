@@ -24,10 +24,13 @@ import org.openqa.selenium.html5.LocationContext;
 import org.openqa.selenium.remote.DriverCommand;
 import org.openqa.selenium.remote.ExecuteMethod;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class RemoteLocationContext implements LocationContext {
-  private final ExecuteMethod executeMethod;
+public class RemoteLocationContext implements LocationContext
+,Serializable
+{
+  private final transient ExecuteMethod executeMethod;
 
   public RemoteLocationContext(ExecuteMethod executeMethod) {
     this.executeMethod = executeMethod;
